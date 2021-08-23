@@ -41,7 +41,7 @@ ResponseSpecification responseSpecAccount = new ResponseSpecBuilder()
         .expectResponseTime(Matchers.lessThan(5000L))//ответное время не более 5сы
         .build();
 
-@Test //Авторизация юзера
+    @Test //Авторизация юзера
     public void userAuthorized() {
             given()
             .spec(requestSpecAccount)

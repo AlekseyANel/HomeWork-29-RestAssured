@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 }*/
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 @Builder
-public class CollectionOfIsbnsItem{// класс описывает каждый элемент листа "collectionOfIsbns"
+public class CollectionOfIsbnsItem {// класс описывает каждый элемент листа "collectionOfIsbns"
 	public static String isbn;
-	}
+}
 

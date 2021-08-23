@@ -1,6 +1,7 @@
 package dataProvider.models.books;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.minidev.json.JSONArray;
+
+import static dataProvider.models.books.CollectionOfIsbnsItem.isbn;
 
 /*{
   "userId": "string",
@@ -20,13 +23,10 @@ import net.minidev.json.JSONArray;
 @Builder
 public class ReqAddListOfBooks {
 	public String userId;
-//	public List<CollectionOfIsbnsItem> collectionOfIsbns;
+	public List<CollectionOfIsbnsItem> collectionOfIsbns;
 
 	public static ReqAddListOfBooks getDefaultRequest() {//подготовленная конструкция для реквестов
-		return new ReqAddListOfBooks("1dd13dec-4558-4423-8739-f4d8c0432fcc" /*"[\n" +
-				"    {\n" +
-				"      \"isbn\": \"string\"\n" +
-				"    }\n" +
-				"  ]"*/);
+		return new ReqAddListOfBooks("1dd13dec-4558-4423-8739-f4d8c0432fcc",
+				List.of(new CollectionOfIsbnsItem()));
 	};
 }
