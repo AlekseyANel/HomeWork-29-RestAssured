@@ -1,30 +1,20 @@
 package dataProvider.models.books;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /*{
   "userId": "string",
-  "collectionOfIsbns": [
-    {
-      "isbn": "string"
-    }
-  ]
+  "collectionOfIsbns": [  {   "isbn": "string"   } ]
 }*/
-/*@Data
-/*@AllArgsConstructor
-@NoArgsConstructor*/
-public class CollectionOfIsbnsItem{
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class CollectionOfIsbnsItem{// класс описывает каждый элемент листа "collectionOfIsbns"
 	public static String isbn;
-
-
-	public static String getIsbn(){
-		return isbn;
 	}
 
-}

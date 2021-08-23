@@ -21,7 +21,7 @@ public class TestRestAssuredTask {
                 .then().statusCode(200)//проверка кода ответа 200?
                 .contentType(ContentType.JSON) //проверка типа ответа Json?
                 .body("MRData.CircuitTable.Circuits.size()", Matchers.equalTo(20))
-                .and().body("MRData.CircuitTable.Circuits", hasSize(20));//дублирование проверки 20ти шт
+                .and().body("MRData.CircuitTable.Circuits", hasSize(20));//дублирование проверки 20ти шт другим способом
         System.out.println(responseTask);
     }
 
